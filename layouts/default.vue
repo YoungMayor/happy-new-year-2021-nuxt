@@ -8,7 +8,9 @@
             <v-container
                 :style="{
                     height: '100%',
+                    backgroundColor: '#191416 !important',
                 }"
+                fluid
                 class="d-flex justify-center align-center"
             >
                 <Nuxt />

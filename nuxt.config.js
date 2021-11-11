@@ -9,7 +9,7 @@ export default {
 
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
-        titleTemplate: '%s - Happy New Year \'21',
+        titleTemplate: '%s - Happy New Year \'22',
         title: 'Welcome',
         meta: [
             { charset: 'utf-8' },
@@ -65,10 +65,10 @@ export default {
             theme_color: '#1a1517'
         },
         manifest: {
-            name: 'Happy New Year \' 2021',
+            name: 'Happy New Year \' 2022',
             lang: 'en',
             // useWebmanifestExtension: false,
-            short_name: 'hny21',
+            short_name: 'hny22',
             background_color: '#1a1517'
         }
     },

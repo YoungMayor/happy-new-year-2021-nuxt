@@ -1,4 +1,3 @@
-/**
 const express = require('express')
 
 var cors = require('cors')
@@ -13,14 +12,10 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }))
 app.use(bodyParser.json({ limit: '50mb', extended: true }))
 
 // Require API routes
-const pdf = require('./routes/pdf')
-const screenshot = require('./routes/screenshot')
-const preview = require('./routes/preview')
+const wish = require('./routes/wish')
 
 // Import API Routes
-app.use(pdf)
-app.use(screenshot)
-app.use(preview)
+app.use(wish)
 
 // Export express app
 module.exports = app
@@ -33,4 +28,3 @@ if (require.main === module) {
         console.log(`API server listening on port ${port}`)
     })
 }
-*/
