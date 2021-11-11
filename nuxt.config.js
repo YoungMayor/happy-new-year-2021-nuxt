@@ -52,7 +52,17 @@ export default {
     ],
 
     // Axios module configuration: https://go.nuxtjs.dev/config-axios
-    axios: {},
+    axios: {
+        baseURL: process.env.NUXT_ENV_BACKEND_URL,
+        // credentials: true,
+        progress: true,
+        headers: {
+            common: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'Accept': 'application/json'
+            }
+        }
+    },
 
     // PWA module configuration: https://go.nuxtjs.dev/pwa
     pwa: {
@@ -90,13 +100,6 @@ export default {
                 }
             }
         }
-    },
-
-    /*
-     ** Server Middleware
-     */
-    serverMiddleware: {
-        '/api': '~/api'
     },
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
