@@ -1,11 +1,8 @@
 <template>
-    <v-card class="wish-card black">
-        <div id="wish-shot" class="black">
+    <v-card class="wish-card">
+        <div id="wish-shot" class="">
             <v-card-title class="pa-1">
-                <v-img
-                    contain
-                    src="/happy-new-year-2022-with-golden-waves-golden-sparkles-black-background.jpg"
-                ></v-img>
+                <v-img contain src="/happy-newyear-banner.jpg"></v-img>
             </v-card-title>
 
             <v-card-text class="primary--text wish-content">
@@ -122,5 +119,17 @@ export default {
     font-family: "Slabo 27px" !important;
     line-height: 1.7;
     letter-spacing: 1.5px !important;
+}
+
+.wish-card,
+#wish-shot {
+    /* background-color: #131313; */
+    background: rgb(9, 9, 9);
+    background: linear-gradient(
+        90deg,
+        rgba(9, 9, 9, 1) 0%,
+        rgba(20, 20, 18, 1) 51%,
+        rgba(9, 9, 9, 1) 100%
+    );
 }
 </style>

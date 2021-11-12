@@ -50,7 +50,9 @@ export default {
     mounted() {
         var confettiSettings = {
             target: "confetti-canvas",
-            start_from_bottom: true,
+            // start_from_edge: false,
+            clock: 15,
+            rotate: true,
         };
         var confetti = new ConfettiGenerator(confettiSettings);
         confetti.render();
