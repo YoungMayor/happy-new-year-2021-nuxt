@@ -50,6 +50,7 @@ export default {
         // https://go.nuxtjs.dev/pwa
         '@nuxtjs/pwa',
         '@nuxtjs/google-fonts',
+        '@nuxtjs/google-analytics',
     ],
 
     // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -119,6 +120,10 @@ export default {
         preload: true,
         download: true,
         inject: true,
+    },
+
+    googleAnalytics: {
+        id: process.env.GOOGLE_ANALYTICS_ID,
     },
 
     // Build Configuration: https://go.nuxtjs.dev/config-build

@@ -5,11 +5,15 @@
             width: '95%',
         }"
     >
+        <canvas id="confetti-canvas"></canvas>
+
         <WishCard v-bind="{ wish }" />
     </div>
 </template>
 
 <script>
+import ConfettiGenerator from "confetti-js";
+
 export default {
     name: "WishPage",
 
@@ -42,5 +46,25 @@ export default {
             };
         }
     },
+
+    mounted() {
+        var confettiSettings = {
+            target: "confetti-canvas",
+            start_from_bottom: true,
+        };
+        var confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
+    },
 };
 </script>
+
+<style>
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* z-index: 1; */
+}
+</style>

@@ -11,9 +11,8 @@
         </v-col>
 
         <v-col cols="12" class="instruction-text">
-            Minim fugiat esse voluptate velit laborum quis et. Nisi nulla fugiat
-            proident tempor proident commodo aute aliqua voluptate ad sint
-            nostrud eiusmod.
+            Hey there, I have a very special "Happy New Year" message for you.
+            Input your token below to see it...
         </v-col>
 
         <v-col cols="12" class="token-form">
@@ -21,10 +20,11 @@
                 v-model="token"
                 :loading="loading"
                 :disabled="loading"
-                hint="Paste the token you were given here. Token is in the format '<name>-<password>'..."
+                hint="Paste the token you were given here..."
+                persistent-hint
                 rounded
                 outlined
-                label="Token here"
+                label="Enter token: <name>-<pin>"
                 :append-icon="
                     (() => {
                         return loading
