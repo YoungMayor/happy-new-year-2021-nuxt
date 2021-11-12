@@ -49,6 +49,7 @@ export default {
         '@nuxtjs/axios',
         // https://go.nuxtjs.dev/pwa
         '@nuxtjs/pwa',
+        '@nuxtjs/google-fonts',
     ],
 
     // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -100,6 +101,24 @@ export default {
                 }
             }
         }
+    },
+
+    googleFonts: {
+        families: {
+            'Slabo 27px': true,
+            Roboto: true,
+            'Josefin+Sans': true,
+            Lobster: true,
+            Comfortaa: true,
+            Lato: [100, 300],
+            Raleway: {
+                wght: [100, 400],
+                ital: [100]
+            },
+        },
+        preload: true,
+        download: true,
+        inject: true,
     },
 
     // Build Configuration: https://go.nuxtjs.dev/config-build

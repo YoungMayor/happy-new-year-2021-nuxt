@@ -8,7 +8,7 @@
                 ></v-img>
             </v-card-title>
 
-            <v-card-text class="text-body-1 grey--text">
+            <v-card-text class="primary--text wish-content">
                 <template v-if="wish.name && wish.name.length">
                     Dear {{ wish.name }},
                 </template>
@@ -118,5 +118,9 @@ export default {
 </script>
 
 <style>
-/*  */
+.wish-content {
+    font-family: "Slabo 27px" !important;
+    line-height: 1.7;
+    letter-spacing: 1.5px !important;
+}
 </style>
