@@ -8,12 +8,7 @@
                 ></v-img>
             </v-card-title>
 
-            <v-card-text
-                class="text-body-1 grey--text"
-                xxxstyle="{
-                    color: '#b68733 !important',
-                }"
-            >
+            <v-card-text class="text-body-1 grey--text">
                 <template v-if="wish.name && wish.name.length">
                     Dear {{ wish.name }},
                 </template>
@@ -34,6 +29,20 @@
         </div>
 
         <v-card-actions>
+            <v-btn
+                icon
+                class=""
+                @click="sendLove"
+                v-if="!(loved || wish.loved)"
+            >
+                <v-icon :color="loved || wish.loved ? 'red' : 'grey'">
+                    {{
+                        processing
+                            ? "mdi-rotate-3d-variant mdi-spin"
+                            : "mdi-heart"
+                    }}
+                </v-icon>
+            </v-btn>
             <v-spacer></v-spacer>
             <v-btn icon class="" @click="copyText">
                 <v-icon class="gold-text"> mdi-content-copy </v-icon>
@@ -65,6 +74,8 @@ export default {
     data() {
         return {
             appURL: window.location.origin,
+            loved: false,
+            processing: false,
         };
     },
 
@@ -94,6 +105,13 @@ export default {
                 title: "Happy New Year",
                 text: "Mayor wishes you a very happy year this 2022",
             });
+        },
+
+        async sendLove() {
+            this.processing = true;
+            await this.$axios.post(`/api/wish/${this.wish.token}/love`);
+            this.loved = true;
+            this.processing = false;
         },
     },
 };

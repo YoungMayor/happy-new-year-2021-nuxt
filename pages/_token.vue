@@ -31,7 +31,7 @@ export default {
                 `/api/wish/${context.params.token}`
             );
             return {
-                wish: response.data.payload,
+                wish: response.data.data,
             };
         } catch (error) {
             return {
