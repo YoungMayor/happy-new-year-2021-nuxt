@@ -19,7 +19,7 @@
                 <v-divider class="my-2"></v-divider>
 
                 <div class="text-right text-caption">
-                    <v-icon left small>mdi-heart</v-icon>
+                    With love <v-icon left right small>mdi-heart</v-icon> from
                     Mayor
                 </div>
             </v-card-text>
