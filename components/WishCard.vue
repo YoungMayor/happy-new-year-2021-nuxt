@@ -12,12 +12,29 @@
 
                 <v-divider class="my-2"></v-divider>
 
-                <div class="text-center">
-                    {{ wish.text }}
-                </div>
+                <v-row
+                    :style="{
+                        backgroundColor: '#171717',
+                    }"
+                >
+                    <v-col cols="7" align-self="center">
+                        <div class="text-center">
+                            {{ wish.text }}
+                        </div>
+                    </v-col>
+
+                    <v-col cols="5" class="pa-0">
+                        <v-img
+                            contain
+                            src="/happy-new-year-happy-new-year-golden-metallic-numbers-date-2022.jpg"
+                        ></v-img>
+                    </v-col>
+                </v-row>
 
                 <div class="hny-text mt-4 text-center">
-                    Happy New Year {{ wish.name }}
+                    Happy New Year
+                    <br />
+                    {{ wish.name }}
                 </div>
 
                 <v-divider class="my-2"></v-divider>
