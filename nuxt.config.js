@@ -51,6 +51,7 @@ export default {
         '@nuxtjs/pwa',
         '@nuxtjs/google-fonts',
         '@nuxtjs/google-analytics',
+        '@nuxtjs/toast',
     ],
 
     // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -124,6 +125,22 @@ export default {
 
     googleAnalytics: {
         id: process.env.GOOGLE_ANALYTICS_ID,
+    },
+
+    toast: {
+        position: 'top-center',
+        register: [ // Register custom toasts
+            {
+                name: 'invalidToken',
+                message: 'Invalid Token given, showing default Wish',
+                options: {
+                    type: 'warning',
+                    theme: "bubble",
+                    position: "top-right",
+                    duration: 5000
+                }
+            }
+        ]
     },
 
     // Build Configuration: https://go.nuxtjs.dev/config-build

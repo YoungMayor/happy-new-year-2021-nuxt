@@ -38,6 +38,8 @@ export default {
                 wish: response.data.data,
             };
         } catch (error) {
+            context.$toast.global.invalidToken();
+
             return {
                 wish: {
                     name: null,
