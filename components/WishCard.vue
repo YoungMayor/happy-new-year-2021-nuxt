@@ -5,39 +5,53 @@
                 <v-img contain src="/happy-newyear-banner.jpg"></v-img>
             </v-card-title>
 
-            <v-card-text class="wish-content">
-                <template v-if="wish.name && wish.name.length">
+            <v-card-text
+                class="wish-content"
+                :style="{
+                    backgroundColor: '#171717',
+                }"
+            >
+                <div
+                    class="greeting-text"
+                    v-if="wish.greeting && wish.greeting.length"
+                >
                     {{ wish.greeting }},
-                </template>
+                </div>
 
                 <v-divider class="my-2"></v-divider>
 
-                <v-row
-                    :style="{
-                        backgroundColor: '#171717',
-                    }"
-                >
-                    <v-col cols="7" align-self="center">
-                        <div class="text-center">
-                            {{ wish.text }}
-                        </div>
-                    </v-col>
-
-                    <v-col cols="5" class="pa-0">
+                <div class="ma-n2">
+                    <div
+                        class="pa-0 float-right"
+                        :style="{
+                            width: '40%',
+                        }"
+                    >
                         <v-img
                             contain
                             src="/happy-new-year-happy-new-year-golden-metallic-numbers-date-2022.jpg"
                         ></v-img>
-                    </v-col>
-                </v-row>
+                    </div>
 
-                <div class="hny-text mt-4 text-center">
+                    <div class="pa-4">
+                        <div class="text-center">
+                            {{ wish.text }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hny-text text-center">
                     Happy New Year
                     <br />
                     {{ wish.name }}
                 </div>
 
-                <v-divider class="my-2"></v-divider>
+                <v-divider
+                    class="my-2"
+                    :style="{
+                        clear: 'both',
+                    }"
+                ></v-divider>
 
                 <div class="text-right text-caption">
                     With love <v-icon left right small>mdi-heart</v-icon> from
@@ -142,21 +156,15 @@ export default {
     letter-spacing: 1.5px !important;
 }
 
-.wish-card,
-#wish-shot {
-    /* background-color: #131313; */
-    background: rgb(9, 9, 9);
-    background: linear-gradient(
-        90deg,
-        rgba(9, 9, 9, 1) 0%,
-        rgba(20, 20, 18, 1) 51%,
-        rgba(9, 9, 9, 1) 100%
-    );
-}
-
 .hny-text {
     font-family: "Petemoss" !important;
     font-size: 42px;
+    line-height: 1;
+}
+
+.greeting-text {
+    font-family: "Petemoss";
+    font-size: 40px;
     line-height: 1;
 }
 </style>
