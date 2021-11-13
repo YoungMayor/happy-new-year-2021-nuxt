@@ -5,15 +5,19 @@
                 <v-img contain src="/happy-newyear-banner.jpg"></v-img>
             </v-card-title>
 
-            <v-card-text class="primary--text wish-content">
+            <v-card-text class="wish-content">
                 <template v-if="wish.name && wish.name.length">
-                    Dear {{ wish.name }},
+                    {{ wish.greeting }},
                 </template>
 
                 <v-divider class="my-2"></v-divider>
 
                 <div class="text-center">
                     {{ wish.text }}
+                </div>
+
+                <div class="hny-text mt-4 text-center">
+                    Happy New Year {{ wish.name }}
                 </div>
 
                 <v-divider class="my-2"></v-divider>
@@ -131,5 +135,11 @@ export default {
         rgba(20, 20, 18, 1) 51%,
         rgba(9, 9, 9, 1) 100%
     );
+}
+
+.hny-text {
+    font-family: "Petemoss" !important;
+    font-size: 42px;
+    line-height: 1;
 }
 </style>

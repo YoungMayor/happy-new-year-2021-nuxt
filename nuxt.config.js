@@ -110,6 +110,7 @@ export default {
             'Slabo 27px': true,
             Roboto: true,
             'Josefin+Sans': true,
+            Petemoss: true,
             Lobster: true,
             Comfortaa: true,
             Lato: [100, 300],
